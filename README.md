@@ -20,3 +20,6 @@ https://itpbootcampfe.github.io/pic-search
   }
 - to deploy to github run `yarn deploy`
 - go to github repo settings and select gh-page branch fror your github pages repo.
+
+- `yarn add @material-ui/core` Material ui library added
+- `yarn add @material-ui/icons` Material ui icon library added
