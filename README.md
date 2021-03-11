@@ -23,3 +23,4 @@ https://itpbootcampfe.github.io/pic-search
 
 - `yarn add @material-ui/core` Material ui library added
 - `yarn add @material-ui/icons` Material ui icon library added
+- `yarn add axios` Axios added

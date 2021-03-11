@@ -23,15 +23,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SearchBar = () => {
+const SearchBar = ({ gonder }) => {
   const classes = useStyles();
-
   const [term, setTerm] = useState('');
 
-  console.log(`term: `, term);
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    gonder(term);
+  };
 
   return (
-    <Paper component="form" onSubmit={() => {}} className={classes.root}>
+    <Paper component="form" onSubmit={onFormSubmit} className={classes.root}>
       <InputBase
         className={classes.input}
         placeholder="Search"
