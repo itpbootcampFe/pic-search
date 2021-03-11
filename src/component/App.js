@@ -1,10 +1,7 @@
 import React from 'react';
 import { CssBaseline, Container, Typography } from '@material-ui/core';
 import ImageIcon from '@material-ui/icons/Image';
-
-// import CssBaseline from '@material-ui/core/CssBaseline';
-// import Typography from '@material-ui/core/Typography';
-// import Container from '@material-ui/core/Container';
+import SeachBar from './SearchBar';
 
 const App = () => {
   return (
@@ -15,6 +12,7 @@ const App = () => {
           <ImageIcon style={{ fontSize: 30, margin: 5 }} />
           React Pic Seach
         </Typography>
+        <SeachBar />
       </Container>
     </>
   );
