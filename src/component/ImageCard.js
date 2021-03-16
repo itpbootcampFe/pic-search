@@ -1,10 +1,23 @@
+import React, { useState, useRef, useEffect } from 'react';
 import { Card } from '@material-ui/core';
-import React from 'react';
 
 const ImageCard = ({ desc, url }) => {
+  const imageRef = useRef(null);
+  const [span, setSpan] = useState(0);
+
+  useEffect(() => {
+    imageRef.current.addEventListener('load', setImageSpan);
+  }, []);
+
+  const setImageSpan = () => {
+    const height = imageRef.current.clientHeight;
+    const imageSpan = Math.ceil(height / 10);
+    setSpan(imageSpan);
+  };
+
   return (
-    <Card>
-      <img alt={desc} src={url} />
+    <Card style={{ gridRowEnd: `span ${span}` }}>
+      <img ref={imageRef} alt={desc} src={url} />
     </Card>
   );
 };
